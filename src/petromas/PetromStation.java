@@ -3,7 +3,7 @@ package petromas;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class PetromStation extends Administration {
+public class PetromStation implements Administration {
 
     private double totalPriceToPay;
 
@@ -88,5 +88,15 @@ public class PetromStation extends Administration {
 
     protected void showDieselPrice() {
         System.out.println("Today price for 1L of diesel is " + this.getDieselPrice() + " RON");
+    }
+
+    @Override
+    public double getGasolinePrice() {
+        return Administration.gasolinePrice;
+    }
+
+    @Override
+    public double getDieselPrice() {
+        return Administration.dieselPrice;
     }
 }

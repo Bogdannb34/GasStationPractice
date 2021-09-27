@@ -1,16 +1,12 @@
 package petromas;
 
-public abstract class Administration {
+public interface Administration {
 
     // Prices for this week
-    private final double gasolinePrice = 6.1;
-    private final double dieselPrice = 5.7;
+    double gasolinePrice = 6.45;
+    double dieselPrice = 5.99;
 
-    public double getGasolinePrice() {
-        return gasolinePrice;
-    }
+    double getGasolinePrice();
+    double getDieselPrice();
 
-    public double getDieselPrice() {
-        return dieselPrice;
-    }
 }
